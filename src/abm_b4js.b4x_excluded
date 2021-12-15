@@ -1,0 +1,20 @@
+﻿'Class module
+Sub Class_Globals
+	' use Public or Dim if you want to share this variable over ALL B4JS classes
+	' use Private if only within this class
+	Public ABM As ABMaterial 'ignore, just to access the constants	
+	Public Page As ABMPage 'ignore, just to be able to run ABMPage B4JS functions	
+	
+	
+End Sub
+
+'Initializes the object. You can NOT add parameters to this method.
+'MUST be called InitializeB4JS is automatically called when using this class
+Public Sub InitializeB4JS
+	
+End Sub
+
+#if JAVASCRIPT
+
+#End If
+
