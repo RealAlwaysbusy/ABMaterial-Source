@@ -1,0 +1,40 @@
+package com.ab.abmaterial;
+
+import anywheresoftware.b4a.BA.Author;
+import anywheresoftware.b4a.BA.Hide;
+
+/**
+ * Can not be created within B4J, But its properties and methods are available through another ABM class.
+ */
+@Author("Alain Bailleul")
+public class ThemeInfiniteScroller implements java.io.Serializable {
+	private static final long serialVersionUID = -721195471692106239L;
+	protected String ThemeName="default";
+	protected String MainColor=ABMaterial.COLOR_LIGHTBLUE;
+	public String CellBorderColor=ABMaterial.COLOR_TRANSPARENT;
+	public String CellBorderColorIntensity="";
+	
+	ThemeInfiniteScroller() {
+	
+	}
+	
+	ThemeInfiniteScroller(String themeName) {
+		this.ThemeName = themeName;
+	}
+	
+	public void Colorize(String color) {
+		MainColor = color;						
+	}
+	
+	@Hide
+	public ThemeInfiniteScroller Clone() {
+		ThemeInfiniteScroller c = new ThemeInfiniteScroller();
+		
+		c.MainColor=MainColor;
+		c.ThemeName=ThemeName;
+		c.CellBorderColor=CellBorderColor;
+		c.CellBorderColorIntensity=CellBorderColorIntensity;
+		return c;
+	}
+}
+
